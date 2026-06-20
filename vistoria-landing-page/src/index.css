@@ -51,6 +51,19 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 img { max-width: 100%; display: block; }
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;letter-spacing:-.02em;line-height:1.1;color:var(--ink)}
+h1{font-size:clamp(2.2rem, 4.6vw, 3.8rem)}
+h2{font-size:clamp(1.8rem, 3.2vw, 2.6rem)}
+h3{font-size:1.25rem}
+p{color:var(--ink-soft)}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);
+}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
+
 /* ===== Buttons ===== */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:10px;

@@ -49,16 +49,16 @@ const cardsData = [
 ];
 
 export default function Motivos() {
+  // activeIndex AGORA REPRESENTA O CARD FOCADO (0 a 3)
   const [activeIndex, setActiveIndex] = useState(1);
   const [perView, setPerView] = useState(3);
 
-  // Referências para ignorar o ciclo de renderização do React durante o arrasto
   const trackRef = useRef(null);
   const isDragging = useRef(false);
   const dragStartX = useRef(0);
   const dragDeltaX = useRef(0);
+  const clickedCardIndex = useRef(null);
 
-  // Recálculo de itens por tela baseado no protótipo original (visualizar pdf)
   useEffect(() => {
     const calcPerView = () => {
       const w = window.innerWidth;
@@ -69,22 +69,29 @@ export default function Motivos() {
     return () => window.removeEventListener('resize', calcPerView);
   }, []);
 
-  const maxIndex = Math.max(0, cardsData.length - perView);
+  const maxIndex = cardsData.length - 1; // Máximo de CARDS, não de rolagens
 
-  // Função centralizada para atualizar o DOM imperativamente ou via estado
+  // O NOVO MOTOR MATEMÁTICO DO CARROSSEL
   const updateTransform = (delta = 0, targetIndex = activeIndex) => {
     if (!trackRef.current) return;
     const card = trackRef.current.children[0];
     if (!card) return;
 
-    // Protótipo usa 24px de gap
     const cardWidth = card.getBoundingClientRect().width + 24;
-    const offset = -(targetIndex * cardWidth);
+    
+    // 1. Limite físico da trilha para não mostrar espaço vazio
+    const maxScrollIndex = Math.max(0, cardsData.length - perView);
+    
+    // 2. Tenta centralizar o card alvo deslocando metade da visão para trás
+    const idealScrollIndex = targetIndex - Math.floor(perView / 2);
+    
+    // 3. Clamping: Trava o movimento entre 0 e o limite físico máximo
+    const clampedScrollIndex = Math.max(0, Math.min(maxScrollIndex, idealScrollIndex));
 
+    const offset = -(clampedScrollIndex * cardWidth);
     trackRef.current.style.transform = `translateX(${offset + delta}px)`;
   };
 
-  // Garante que o CSS reflita o estado sempre que o activeIndex mudar
   useEffect(() => {
     updateTransform(0, activeIndex);
   }, [activeIndex, perView]);
@@ -94,11 +101,13 @@ export default function Motivos() {
     setActiveIndex(safeIndex);
   };
 
-  // Controladores de eventos de ponteiro 
   const handlePointerDown = (e) => {
     isDragging.current = true;
     dragStartX.current = e.clientX;
     dragDeltaX.current = 0;
+
+    const card = e.target.closest('.bcard');
+    clickedCardIndex.current = card ? parseInt(card.dataset.index, 10) : null;
 
     if (trackRef.current) {
       trackRef.current.classList.add('dragging');
@@ -121,11 +130,21 @@ export default function Motivos() {
       trackRef.current.classList.remove('dragging');
       trackRef.current.style.transition = 'transform .55s cubic-bezier(.22,.61,.36,1)';
 
-      const cardWidth = trackRef.current.children[0].getBoundingClientRect().width + 24;
-      const movedCards = Math.round(-dragDeltaX.current / cardWidth);
+      // CLIQUE ESTÁTICO: O activeIndex recebe exatamente o card clicado
+      if (Math.abs(dragDeltaX.current) < 5) {
+        if (clickedCardIndex.current !== null) {
+          goTo(clickedCardIndex.current);
+        }
+      } else {
+        // ARRASTO: Muda o activeIndex com base no percurso movido
+        const cardWidth = trackRef.current.children[0].getBoundingClientRect().width + 24;
+        const movedCards = Math.round(-dragDeltaX.current / cardWidth);
+        goTo(activeIndex + movedCards);
+      }
 
+      updateTransform(0, activeIndex);
       dragDeltaX.current = 0;
-      goTo(activeIndex + movedCards);
+      clickedCardIndex.current = null;
     }
   };
 
@@ -140,7 +159,6 @@ export default function Motivos() {
 
         <div className="carousel" id="carousel">
           <div className="carousel-viewport">
-            {/* Aplicação dos ouvintes sintéticos do React */}
             <div
               className="carousel-track"
               ref={trackRef}
@@ -152,7 +170,9 @@ export default function Motivos() {
               {cardsData.map((card, i) => (
                 <article
                   key={card.id}
-                  className={`bcard ${i === activeIndex + Math.floor(perView / 2) ? 'is-active' : ''}`}
+                  data-index={i}
+                  className={`bcard ${i === activeIndex ? 'is-active' : ''}`}
+                  style={{ cursor: 'pointer' }}
                 >
                   <div className="ico-wrap" aria-hidden="true">
                     {card.icon}
@@ -179,7 +199,8 @@ export default function Motivos() {
               <ChevronLeft size={20} />
             </button>
             <div className="car-dots" role="tablist">
-              {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+              {/* AS BOLINHAS AGORA REPRESENTAM CADA CARD EXATO */}
+              {cardsData.map((_, i) => (
                 <button
                   key={i}
                   className={`car-dot ${i === activeIndex ? 'is-active' : ''}`}
