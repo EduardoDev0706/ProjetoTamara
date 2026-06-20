@@ -1,4 +1,5 @@
 Especificações Técnicas e de Planejamento: Migração de Landing Page para React
+
 1. Estimativa de Tempo Global
 
     Prazo total: 5 a 7 dias úteis.

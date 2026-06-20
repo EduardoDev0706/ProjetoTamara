@@ -1,4 +1,5 @@
 Diretrizes de Versionamento: Boas Práticas, Commits e Resolução de Conflitos
+
 1. Padrão de Mensagens de Commit (Conventional Commits)
 
 Para garantir um histórico de alterações legível e automatizável, todas as mensagens de commit devem seguir a especificação do Conventional Commits. O formato padrão é estruturado da seguinte forma:
@@ -53,9 +54,11 @@ Em uma equipe de 3 desenvolvedores atuando na mesma Landing Page, a sobreposiç�
 Caso o Git identifique alterações conflitantes no mesmo arquivo durante um processo de merge, o fluxo de resolução deve seguir rigorosamente estes passos:
 
 ### Passo 1: Identificar os arquivos afetados
+
 O terminal indicará quais arquivos falharam no merge automático. O comando `git status` listará esses arquivos sob a seção *Unmerged paths*.
 
 ### Passo 2: Analisar os marcadores de conflito
+
 Abra o arquivo afetado no editor de código (Neovim/VS Code). O Git insere marcadores visuais delimitando as diferenças:
 
 ```text
