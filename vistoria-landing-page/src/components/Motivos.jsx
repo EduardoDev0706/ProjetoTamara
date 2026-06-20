@@ -1,3 +1,5 @@
+// AUTOR: Eduardo do Carmo
+
 import { useState, useRef, useEffect } from 'react';
 import { Shield, Clock, CheckCircle, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 
