@@ -1,4 +1,4 @@
-// AUTOR: [Seu Nome]
+// AUTOR: Maxsuel Silva Teles
 
 import {
   CalendarDays,
@@ -13,12 +13,12 @@ import productData from '../data/productData.json';
 
 // Mapa de ícones: chave bate com o campo "icone" do JSON
 const ICONES = {
-  clipboard:    <CalendarDays size={20} />,
-  book:         <BookOpen size={20} />,
-  wrench:       <Wrench size={20} />,
-  camera:       <Camera size={20} />,
+  clipboard: <CalendarDays size={20} />,
+  book: <BookOpen size={20} />,
+  wrench: <Wrench size={20} />,
+  camera: <Camera size={20} />,
   'alert-circle': <AlertCircle size={20} />,
-  layers:       <Layers size={20} />,
+  layers: <Layers size={20} />,
   'check-square': <CheckSquare size={20} />,
 };
 

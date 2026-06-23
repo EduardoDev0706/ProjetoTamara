@@ -1,4 +1,4 @@
-// AUTOR: [Seu Nome]
+// AUTOR: Maxsuel Silva Teles
 
 export default function Profissional() {
   return (
