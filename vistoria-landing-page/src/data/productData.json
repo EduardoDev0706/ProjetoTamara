@@ -1,0 +1,61 @@
+{
+  "eyebrow": "Sobre o produto",
+  "titulo": "Tudo o que você precisa para fazer uma vistoria completa, sem depender de ninguém",
+  "descricao": "O Checklist e Manual de Vistoria reúne, em um único material, tudo o que normalmente só engenheiros e arquitetos sabem — adaptado para quem nunca pegou as chaves de um imóvel novo.",
+  "imagemAlt": "Checklist de vistoria sendo conferido em um apartamento novo",
+  "cta": {
+    "primario": { "label": "Quero adquirir agora", "href": "#contato" },
+    "secundario": { "label": "Tenho dúvidas", "href": "#faq" }
+  },
+  "itens": [
+    {
+      "id": 1,
+      "icone": "clipboard",
+      "titulo": "Checklist completo, ambiente por ambiente",
+      "descricao": "Cozinha, área de serviço, banheiros, quartos, sala e varanda — organizados para você não esquecer nada, mesmo com o tempo curto da vistoria."
+    },
+    {
+      "id": 2,
+      "icone": "book",
+      "titulo": "Manual em linguagem simples",
+      "descricao": "Sem precisar ser arquiteta ou engenheira: você vai saber exatamente o que testar, como testar e por que aquilo importa."
+    },
+    {
+      "id": 3,
+      "icone": "wrench",
+      "titulo": "Lista de ferramentas fáceis de conseguir",
+      "descricao": "A maioria você já tem em casa. O que precisar comprar custa pouquíssimo e está em ordem de prioridade."
+    },
+    {
+      "id": 4,
+      "icone": "camera",
+      "titulo": "Orientações para registrar inconformidades",
+      "descricao": "Como marcar, fotografar e documentar cada defeito para garantir que tudo seja corrigido na revistoria."
+    },
+    {
+      "id": 5,
+      "icone": "alert-circle",
+      "titulo": "Exemplos reais de defeitos, com fotos",
+      "descricao": "Peça oca, caimento incorreto, ponto de chuveiro recuado, sifão vazando — você vai reconhecer na hora, sem dúvida."
+    },
+    {
+      "id": 6,
+      "icone": "layers",
+      "titulo": "Referências normativas aplicáveis",
+      "descricao": "Saiba o que a construtora é obrigada por lei a entregar e tenha embasamento técnico na hora de exigir o reparo."
+    },
+    {
+      "id": 7,
+      "icone": "check-square",
+      "titulo": "Critérios para aprovar ou reprovar a vistoria",
+      "descricao": "Entenda o que é defeito grave (reparo obrigatório) e o que é detalhe menor — para tomar a decisão certa com segurança."
+    }
+  ],
+  "normativas": [
+    "ABNT NBR 17170",
+    "ABNT NBR 5674",
+    "ABNT NBR 9050",
+    "CDC — Código de Defesa do Consumidor",
+    "Lei 4.591/64 — Lei do Condomínio"
+  ]
+}

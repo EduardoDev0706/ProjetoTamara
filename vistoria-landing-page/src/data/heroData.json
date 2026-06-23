@@ -1,0 +1,24 @@
+{
+  "eyebrow": "Checklist & Manual de Vistoria",
+  "titulo": "Vistoria de Imóvel: o que verificar ao receber as chaves do seu apartamento",
+  "tituloDestaque": "receber as chaves",
+  "subtitulo": "Te dando autonomia para garantir seu sonho — sem dor de cabeça, sem prejuízos e com a segurança de quem sabe exatamente o que conferir.",
+  "cta": {
+    "primario": { "label": "Quero meu checklist", "href": "#produto" },
+    "secundario": { "label": "Ver o que está incluso", "href": "#produto" }
+  },
+  "trust": {
+    "estrelas": 5,
+    "texto": "+1.200 compradores já receberam as chaves com tranquilidade"
+  },
+  "badge": {
+    "titulo": "Checklist por ambiente",
+    "subtitulo": "Cozinha · banheiros · quartos · sala · área de serviço"
+  },
+  "stats": [
+    { "numero": "+1.200", "label": "apartamentos vistoriados" },
+    { "numero": "6 anos",  "label": "de experiência técnica" },
+    { "numero": "100%",    "label": "linguagem para leigos" },
+    { "numero": "4,9 / 5", "label": "satisfação dos clientes" }
+  ]
+}
