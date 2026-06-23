@@ -1,5 +1,3 @@
-// AUTOR: MAXSUEL SILVA TELES
-
 import { ClipboardCheck } from 'lucide-react';
 import heroData from '../data/heroData.json';
 
@@ -7,10 +5,10 @@ export default function Hero() {
   const { eyebrow, titulo, tituloDestaque, subtitulo, cta, trust, badge, stats } = heroData;
 
   // Divide o título em duas partes: antes e depois do trecho destacado
-  const partes = titulo.split(tituloDestaque);
+  const partes = titulo?.split(tituloDestaque) || ['', ''];
 
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       {/* Glows de fundo */}
       <div className="hero-glow glow-1" aria-hidden="true" />
       <div className="hero-glow glow-2" aria-hidden="true" />
@@ -72,8 +70,8 @@ export default function Hero() {
 
         {/* ===== Stats ===== */}
         <div className="hero-meta">
-          {stats.map((stat, i) => (
-            <div className="item" key={i}>
+          {stats.map((stat) => (
+            <div className="item" key={stat.label}>
               <div className="n">{stat.numero}</div>
               <div className="l">{stat.label}</div>
             </div>

@@ -68,7 +68,7 @@ function ProvaSocial() {
   }
 
   return (
-    <section className="prova-social">
+    <section className="prova-social" id="provasocial">
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">Feedback dos clientes</span>
