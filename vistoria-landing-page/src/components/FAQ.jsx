@@ -42,19 +42,19 @@ export default function FAQ() {
           <p>Tudo o que você precisa saber antes de adquirir o seu checklist de vistoria.</p>
         </div>
 
-        {/* Classe alterada para bater com o seu CSS (.faq) */}
+        {/* Classe alterada para bater com o CSS (.faq) */}
         <div className="faq">
           {faqData.map((item) => {
             const isOpen = openItem === item.id;
             return (
-              <div 
-                key={item.id} 
+              <div
+                key={item.id}
                 // Injeta is-open em vez de is-active
                 className={`faq-item ${isOpen ? 'is-open' : ''}`}
               >
-                <button 
+                <button
                   // Classe faq-q em vez de faq-question
-                  className="faq-q" 
+                  className="faq-q"
                   onClick={() => toggleItem(item.id)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-a-${item.id}`}
@@ -63,7 +63,7 @@ export default function FAQ() {
                   {/* Ícone único com a classe chev para rotacionar via CSS */}
                   <ChevronDown className="chev" size={20} aria-hidden="true" />
                 </button>
-                <div 
+                <div
                   id={`faq-a-${item.id}`}
                   // Classe faq-a que contém o max-height
                   className="faq-a"
