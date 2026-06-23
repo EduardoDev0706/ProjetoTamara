@@ -1,14 +1,12 @@
-import './index.css'
+import './index.css';
 
-// Componentes do Desenvolvedor 1
-import Header from './components/Header.jsx'
-import Motivos from './components/Motivos.jsx'
-import FAQ from './components/FAQ.jsx'
-
-// Componentes do Desenvolvedor 2
-import Hero from './components/Hero.jsx'
-import Product from './components/Product.jsx'
-import Profissional from './components/Profissional.jsx'
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import Motivos from './components/Motivos.jsx';
+import Product from './components/Product.jsx';
+import Profissional from './components/Profissional.jsx';
+import ProvaSocial from './components/ProvaSocial.jsx';
+import FAQ from './components/FAQ.jsx';
 
 function App() {
   return (
@@ -18,6 +16,7 @@ function App() {
       <Motivos />
       <Product />
       <Profissional />
+      <ProvaSocial />
       <FAQ />
     </>
   );
