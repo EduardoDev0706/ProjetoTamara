@@ -1,5 +1,6 @@
 import { ClipboardCheck } from 'lucide-react';
 import heroData from '../data/heroData.json';
+import apartamentoImg from '../assets/img/apartamentoImg.webp';
 
 export default function Hero() {
   const { eyebrow, titulo, tituloDestaque, subtitulo, cta, trust, badge, stats } = heroData;
@@ -52,7 +53,7 @@ export default function Hero() {
           {/* ===== Coluna visual ===== */}
           <div className="hero-visual">
             <img
-              src="img/hero-apartment.jpg"
+              src={apartamentoImg}
               alt="Apartamento novo, vazio e iluminado por luz natural"
               loading="eager"
             />

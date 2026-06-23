@@ -1,4 +1,5 @@
 // AUTOR: Maxsuel Silva Teles
+import checkVistoria from '../assets/img/checkVistoria.webp'
 
 import {
   CalendarDays,
@@ -34,7 +35,7 @@ export default function Product() {
           <div className="product-visual">
             <span className="product-tag">O que você recebe</span>
             <img
-              src="img/checklist.jpg"
+              src={checkVistoria}
               alt={imagemAlt}
               loading="lazy"
             />

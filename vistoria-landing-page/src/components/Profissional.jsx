@@ -1,4 +1,5 @@
 // AUTOR: Maxsuel Silva Teles
+import fotoTamara from '../assets/img/tamaraProfissional.webp';
 
 export default function Profissional() {
   return (
@@ -9,7 +10,7 @@ export default function Profissional() {
           {/* ===== Foto ===== */}
           <div className="prof-photo">
             <img
-              src="img/architect.jpg"
+              src={fotoTamara}
               alt="Arquiteta e urbanista responsável pelo conteúdo"
               loading="lazy"
             />
