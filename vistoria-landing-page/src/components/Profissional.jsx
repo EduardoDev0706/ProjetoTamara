@@ -53,7 +53,7 @@ export default function Profissional() {
                 A
               </div>
               <div>
-                <div className="name">Nome da Arquiteta</div>
+                <div className="name">Tamara Porfírio</div>
                 <div className="role">Arquiteta e Urbanista · CAU XXXXX-X</div>
               </div>
             </div>
