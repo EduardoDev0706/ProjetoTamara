@@ -451,7 +451,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* Conteúdo interno do Footer (Mix das classes -grid, -col e -logo) */
 .footer-grid, .foot-grid {
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 80px; padding: 80px 0;
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 80px; padding: 80px 0;
 }
 .footer-logo { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
 .logo-icon {
@@ -464,6 +464,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .footer-col a, .foot-grid ul a { display: block; color: rgba(255,255,255,.65); text-decoration: none; margin-bottom: 16px; transition: .3s; }
 .footer-col a:hover, .foot-grid ul a:hover { color: #fff; }
 .foot-grid ul { list-style: none; }
+
+/* Classes base do footer*/
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  word-break: break-all;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+}
 
 .footer-social, .foot-social { display: flex; gap: 14px; margin-top: 30px; }
 .footer-social a, .foot-social a {
@@ -494,6 +506,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .footer-grid, .foot-grid { grid-template-columns: 1fr; text-align: center; }
   .footer-logo, .footer-social, .foot-social { justify-content: center; }
   .footer-col p { margin: auto; }
+  
+  .contact-link { justify-content: center; }
 }
 
 @media (max-width: 680px) {

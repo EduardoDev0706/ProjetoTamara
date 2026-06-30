@@ -1,10 +1,7 @@
-// autor Gabriel Manzi
-
 import {
   FaInstagram,
-  FaFacebookF,
-  FaLinkedinIn,
   FaArrowRight,
+  FaEnvelope,
 } from "react-icons/fa";
 
 function Footer() {
@@ -16,17 +13,11 @@ function Footer() {
         </span>
 
         <h2>
-          Receba as chaves do seu
-          <br />
-          apartamento com a segurança de um
-          <br />
-          profissional
+          Receba as chaves do seu apartamento com a segurança de um profissional
         </h2>
 
         <p>
-          Em poucos minutos você baixa o material e começa a se preparar
-          <br />
-          para sua vistoria.
+          Em poucos minutos você baixa o material e começa a se preparar para sua vistoria.
         </p>
 
         <a
@@ -40,7 +31,6 @@ function Footer() {
         </a>
       </div>
 
-      {/* Conteúdo */}
       <div className="container footer-grid">
         <div className="footer-col">
           <div className="footer-logo">
@@ -54,14 +44,6 @@ function Footer() {
             Checklist e Manual de Vistoria para você receber as chaves do
             seu apartamento com autonomia e segurança técnica.
           </p>
-
-          <div className="footer-social">
-            <h3>Cheque as redes sociais!</h3>
-            <a href="https://www.instagram.com/tamaraporfirio.arquiteta?igsh=MXZxbDdpZmthbmJuYw==">
-              <FaInstagram />
-            </a>
-
-          </div>
         </div>
 
         <div className="footer-col">
@@ -69,22 +51,31 @@ function Footer() {
 
           <a href="#produto">Sobre o produto</a>
           <a href="#profissional">A profissional</a>
-          <a href="#provasocial">Feedbacks</a>
+          <a href="#feedbacks">Feedbacks</a>
           <a href="#faq">FAQ</a>
         </div>
 
         <div className="footer-col">
           <h4>Contato</h4>
-
-          <a href="mailto:casabelisarquitetura@gmail.com">
-            casabelisarquitetura@gmail.com
+          
+          <a 
+            href="mailto:casabelisarquitetura@gmail.com"
+            className="contact-link"
+          >
+            <FaEnvelope size={18} className="contact-icon" />
           </a>
 
-          <a href="https://www.instagram.com/tamaraporfirio.arquiteta?igsh=MXZxbDdpZmthbmJuYw==">@CasaBelis</a>
+          <a 
+            href="https://www.instagram.com/tamaraporfirio.arquiteta?igsh=MXZxbDdpZmthbmJuYw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            <FaInstagram size={18} className="contact-icon" />
+          </a>
         </div>
       </div>
 
-      {/* Barra inferior */}
       <div className="container footer-bottom">
         <span>© 2025 Vistoria. Todos os direitos reservados.</span>
 
