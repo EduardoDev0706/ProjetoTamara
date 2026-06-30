@@ -55,7 +55,14 @@ export default function Header() {
 
         <div className="nav-cta">
           <a href="#contato" className="btn btn-ghost">Falar com a equipe</a>
-          <a href="#produto" className="btn btn-primary">Quero o Checklist</a>
+          <a
+            href="https://hotmart.com/pt-br/marketplace/produtos/vistoria-de-imovel-o-que-verificar-ao-receber-as-chaves-do-seu-apartamento/T100581025D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
+            Quero o Checklist
+          </a>
 
           {/* Botão de Toggle com atributos ARIA controlados e ícones da Stack*/}
           <button

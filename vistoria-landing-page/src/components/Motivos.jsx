@@ -80,13 +80,13 @@ export default function Motivos() {
     if (!card) return;
 
     const cardWidth = card.getBoundingClientRect().width + 24;
-    
+
     // 1. Limite físico da trilha para não mostrar espaço vazio
     const maxScrollIndex = Math.max(0, cardsData.length - perView);
-    
+
     // 2. Tenta centralizar o card alvo deslocando metade da visão para trás
     const idealScrollIndex = targetIndex - Math.floor(perView / 2);
-    
+
     // 3. Clamping: Trava o movimento entre 0 e o limite físico máximo
     const clampedScrollIndex = Math.max(0, Math.min(maxScrollIndex, idealScrollIndex));
 
@@ -223,7 +223,14 @@ export default function Motivos() {
           </div>
 
           <div className="cards-cta">
-            <a href="#produto" className="btn btn-primary">Garantir minha vistoria sem dor de cabeça</a>
+            <a
+              href="https://hotmart.com/pt-br/marketplace/produtos/vistoria-de-imovel-o-que-verificar-ao-receber-as-chaves-do-seu-apartamento/T100581025D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Garantir minha vistoria sem dor de cabeça
+            </a>
           </div>
         </div>
       </div>

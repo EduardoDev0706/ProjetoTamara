@@ -28,7 +28,12 @@ export default function Hero() {
             <p className="lead">{subtitulo}</p>
 
             <div className="hero-cta">
-              <a href={cta.primario.href} className="btn btn-accent">
+              <a
+                href={cta.primario.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-accent"
+              >
                 {cta.primario.label}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12" />

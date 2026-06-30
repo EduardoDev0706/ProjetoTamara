@@ -29,7 +29,12 @@ function Footer() {
           para sua vistoria.
         </p>
 
-        <a href="#contato" className="btn-footer">
+        <a
+          href="https://hotmart.com/pt-br/marketplace/produtos/vistoria-de-imovel-o-que-verificar-ao-receber-as-chaves-do-seu-apartamento/T100581025D"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-footer"
+        >
           Quero meu Checklist agora
           <FaArrowRight />
         </a>
@@ -40,8 +45,8 @@ function Footer() {
         <div className="footer-col">
           <div className="footer-logo">
             <a href="#hero">
-            <div className="logo-icon">V</div>
-            <h3>Vistoria.</h3>
+              <div className="logo-icon">V</div>
+              <h3>Vistoria.</h3>
             </a>
           </div>
 
@@ -51,6 +56,7 @@ function Footer() {
           </p>
 
           <div className="footer-social">
+            <h3>Cheque as redes sociais!</h3>
             <a href="https://www.instagram.com/tamaraporfirio.arquiteta?igsh=MXZxbDdpZmthbmJuYw==">
               <FaInstagram />
             </a>
@@ -71,7 +77,7 @@ function Footer() {
           <h4>Contato</h4>
 
           <a href="mailto:casabelisarquitetura@gmail.com">
-            casabelisarquitetura@gmail.com 
+            casabelisarquitetura@gmail.com
           </a>
 
           <a href="https://www.instagram.com/tamaraporfirio.arquiteta?igsh=MXZxbDdpZmthbmJuYw==">@CasaBelis</a>
