@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import depoimentosData from "../assets/avaliações/depoimento";
+import depoimentosData from "../assets/avaliacoes/depoimento.js";
 
 function ProvaSocial() {
   const [depoimentos, setDepoimentos] = useState([]);
@@ -67,7 +67,7 @@ function ProvaSocial() {
   }
 
   return (
-    <section className="prova-social" id="provasocial">
+    <section className="prova-social" id="feedbacks">
       <div className="container">
         <div className="section-head">
           <span className="eyebrow">Feedback dos clientes</span>
