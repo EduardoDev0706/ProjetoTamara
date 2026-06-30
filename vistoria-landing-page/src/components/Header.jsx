@@ -65,7 +65,7 @@ export default function Header() {
           </a>
 
           {/* Botão de Toggle com atributos ARIA controlados e ícones da Stack*/}
-          <button
+          {/* <button
             className="menu-toggle"
             id="menuToggle"
             aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
@@ -73,7 +73,7 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          </button> */}
         </div>
       </div>
     </header>

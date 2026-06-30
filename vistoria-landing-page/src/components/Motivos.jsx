@@ -228,8 +228,9 @@ export default function Motivos() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
+              style={{ touchAction: 'manipulation' }}
             >
-              Garantir minha vistoria sem dor de cabeça
+              Garantir minha vistoria
             </a>
           </div>
         </div>

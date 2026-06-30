@@ -36,7 +36,7 @@ function Footer() {
           <div className="footer-logo">
             <a href="#hero">
               <div className="logo-icon">V</div>
-              <h3>Vistoria.</h3>
+              <h3>Vistoria</h3>
             </a>
           </div>
 
