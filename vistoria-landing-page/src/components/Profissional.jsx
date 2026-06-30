@@ -50,11 +50,11 @@ export default function Profissional() {
                   flexShrink: 0,
                 }}
               >
-                A
+                T
               </div>
               <div>
                 <div className="name">Tamara Porfírio</div>
-                <div className="role">Arquiteta e Urbanista · CAU XXXXX-X</div>
+                <div className="role">Arquiteta e Urbanista</div>
               </div>
             </div>
           </div>
